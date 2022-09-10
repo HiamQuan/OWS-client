@@ -23,7 +23,7 @@ export const LabelCustom = styled.label`
 `;
 
 export const SelectCustom = styled(Select)`
-  width: 92px !important;
+  width: ${(props: any) => props.widthEl || "92px" } !important;
   .ant-select-selector {
     height: 40px !important;
     padding: 4px 11px !important;

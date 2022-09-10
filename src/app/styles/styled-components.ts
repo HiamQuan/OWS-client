@@ -7,6 +7,9 @@ export interface IThemeInterface {
     warning: string;
     success: string;
     light: string;
+    bgWhite: string;
+    textColor: string;
+    borderColor: string;
   };
 }
 
@@ -17,6 +20,9 @@ export const theme: IThemeInterface = {
     warning: '#faad14',
     success: '#52c41a',
     light: '#d4d9e1',
+    bgWhite: '#ffffff',
+    textColor: '#000000',
+    borderColor: '#cccccc'
   },
 };
 

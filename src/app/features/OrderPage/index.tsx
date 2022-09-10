@@ -85,9 +85,9 @@ const OrderPage = () => {
           <Col>
             <S.LabelCustom>Khung giờ</S.LabelCustom>
             <S.FormCustom name="schedule">
-              <S.SelectCustom defaultValue="08:30 AM">
+              <S.SelectCustom widthEl={"150px" as string}>
                 {slots.map((item: any) => (
-                  <Option key={item._id} value={item.value}>
+                  <Option key={item._id} value={item.text}>
                     {item.text}
                   </Option>
                 ))}
