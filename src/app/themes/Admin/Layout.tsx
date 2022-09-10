@@ -4,7 +4,7 @@ import { AiOutlineDashboard, AiOutlineGroup, AiOutlineSchedule} from 'react-icon
 import {AiOutlineMenuUnfold, AiOutlineMenuFold} from 'react-icons/ai';
 import {Layout, Dropdown, Menu, Image, Avatar} from 'antd';
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Outlet} from 'react-router-dom';
 
 
 const { Sider, Content} = Layout;
@@ -110,7 +110,7 @@ function LayoutAdmin() {
               minHeight: 280,
             }}
           >
-            Content
+            <Outlet/>
           </Content>
         </Layout>
       </S.WrapLayout>
