@@ -4,5 +4,5 @@ import slotReducer from '@/app/features/SlotPage/reducer';
 
 export default combineReducers({
   test: homeReducer,
-  slot: slotReducer
+  slot: slotReducer,
 });

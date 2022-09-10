@@ -22,7 +22,7 @@ export const theme: IThemeInterface = {
     light: '#d4d9e1',
     bgWhite: '#ffffff',
     textColor: '#000000',
-    borderColor: '#cccccc'
+    borderColor: '#cccccc',
   },
 };
 
