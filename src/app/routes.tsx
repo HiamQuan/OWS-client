@@ -4,6 +4,7 @@ import {AdminLayout, DefaultLayout} from './themes';
 
 import HomePage from './features/HomePage';
 import SlotPage from './features/SlotPage';
+import PaidClass from './features/PaidClass';
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<HomePage />} />
         <Route path='slots' element={<SlotPage />} />
+        <Route path='paidclass' element={<PaidClass/>}/>
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </RouterWrapper>
