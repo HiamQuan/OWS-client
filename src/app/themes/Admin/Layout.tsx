@@ -1,13 +1,16 @@
 // import {Outlet} from 'react-router-dom';
 import * as S from './styled';
-import { AiOutlineDashboard, AiOutlineGroup, AiOutlineSchedule} from 'react-icons/ai';
+import {
+  AiOutlineDashboard,
+  AiOutlineGroup,
+  AiOutlineSchedule,
+} from 'react-icons/ai';
 import {AiOutlineMenuUnfold, AiOutlineMenuFold} from 'react-icons/ai';
 import {Layout, Dropdown, Menu, Image, Avatar} from 'antd';
 import React, {useState} from 'react';
 import {Link, Outlet, useNavigate} from 'react-router-dom';
 
 const { Sider, Content} = Layout;
-
 function LayoutAdmin() {
   const [collapsed, setCollapsed] = useState(false);
   const navigate = useNavigate();
@@ -28,7 +31,6 @@ function LayoutAdmin() {
       icon: <AiOutlineDashboard />,
       label: 'Dashboard',
     },
-    
   ];
   const menu = (
     <Menu
@@ -52,7 +54,12 @@ function LayoutAdmin() {
   return (
     <S.Wrapper>
       <S.WrapLayout>
-        <S.WrapSider as={Sider} trigger={null} collapsible collapsed={collapsed}>
+        <S.WrapSider
+          as={Sider}
+          trigger={null}
+          collapsible
+          collapsed={collapsed}
+        >
           <div className="logo">
             <Link to={'/admin'}>
               <Image
@@ -92,11 +99,19 @@ function LayoutAdmin() {
                 style: {fontSize: '30px'},
               }
             )}
-             <S.WrapperSearch placeholder="Search..." onSearch={onSearch} enterButton />
+            <S.WrapperSearch
+              placeholder="Search..."
+              onSearch={onSearch}
+              enterButton
+            />
             <S.HeaderUser>
               <div style={{marginRight: '10px'}}>Nguyen Anh Quan</div>
 
-              <Dropdown overlay={menu} placement="bottomRight" trigger={['click']}>
+              <Dropdown
+                overlay={menu}
+                placement="bottomRight"
+                trigger={['click']}
+              >
                 <Avatar style={{color: '#f56a00', backgroundColor: '#fde3cf'}}>
                   N
                 </Avatar>
@@ -111,7 +126,7 @@ function LayoutAdmin() {
               minHeight: 280,
             }}
           >
-            <Outlet/>
+            <Outlet />
           </Content>
         </Layout>
       </S.WrapLayout>

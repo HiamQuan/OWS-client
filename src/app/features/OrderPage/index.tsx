@@ -1,4 +1,4 @@
-import { IOrderModel } from '@/app/services/models/Order.model';
+import {IOrderModel} from '@/app/services/models/Order.model';
 import orderService from '@/app/services/order.service';
 import {Col, Form, Radio, Row, Select} from 'antd';
 import axios from 'axios';
@@ -11,7 +11,7 @@ const {Option} = Select;
 const OrderPage = () => {
   const [slots, setSlots] = useState<any[]>([]);
   const onFinish = async (values: IOrderModel) => {
-    await orderService.createOrder(values)
+    await orderService.createOrder(values);
     console.log('Received values of form: ', values);
   };
   useEffect(() => {
@@ -85,9 +85,9 @@ const OrderPage = () => {
           <Col>
             <S.LabelCustom>Khung giờ</S.LabelCustom>
             <S.FormCustom name="schedule">
-              <S.SelectCustom widthEl={"150px" as string}>
+              <S.SelectCustom widthEl={'150px'}>
                 {slots.map((item: any) => (
-                  <Option key={item._id} value={item.text}>
+                  <Option key={item._id} value={item._id}>
                     {item.text}
                   </Option>
                 ))}
