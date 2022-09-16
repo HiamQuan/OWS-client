@@ -11,11 +11,11 @@ const AppRouter = () => {
     <RouterWrapper>
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="order" element={<OrderPage />} />
+        <Route path="orders" element={<OrderPage />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<HomePage />} />
-        <Route path='slots' element={<SlotPage />} />
+        <Route path="slots" element={<SlotPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </RouterWrapper>

@@ -1,9 +1,9 @@
 import {http} from '@/utils/httpOption';
-import { IOrderModel } from './models/Order.model';
+import {IOrderModel} from './models/Order.model';
 
 class OrderService {
-  createOrder(order:IOrderModel) {
-    return http.post('orders',order);
+  createOrder(order: IOrderModel) {
+    return http.post('orders', order);
   }
 }
 
