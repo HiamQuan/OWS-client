@@ -4,13 +4,13 @@ import { AiOutlineDashboard, AiOutlineGroup, AiOutlineSchedule} from 'react-icon
 import {AiOutlineMenuUnfold, AiOutlineMenuFold} from 'react-icons/ai';
 import {Layout, Dropdown, Menu, Image, Avatar} from 'antd';
 import React, {useState} from 'react';
-import {Link, Outlet} from 'react-router-dom';
-
+import {Link, Outlet, useNavigate} from 'react-router-dom';
 
 const { Sider, Content} = Layout;
 
 function LayoutAdmin() {
   const [collapsed, setCollapsed] = useState(false);
+  const navigate = useNavigate();
   const onSearch = (value: string) => console.log(value);
   const dataRenderMenu = [
     {
@@ -19,7 +19,7 @@ function LayoutAdmin() {
       label: 'My Classes',
     },
     {
-      key: '2',
+      key: 'calendar',
       icon: <AiOutlineSchedule />,
       label: 'Class Schedule',
     },
@@ -64,6 +64,7 @@ function LayoutAdmin() {
             </Link>
           </div>
           <Menu
+            onClick={(e) => {navigate(e.key)}}
             theme="dark"
             mode="inline"
             defaultSelectedKeys={['1']}
